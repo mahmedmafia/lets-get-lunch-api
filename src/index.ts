@@ -1,8 +1,7 @@
 import http = require('http');
 import * as express from 'express';
 import cors = require('cors');
-import bodyParser = require('body-parser');
-import Promise = require('bluebird');
+const bodyParser = require('body-parser');
 import mongoose = require('mongoose');
 import api from './routes';
 
@@ -21,12 +20,12 @@ app.use(bodyParser.json({ limit: '100kb' }));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const options = {
-  useMongoClient: true,
   autoIndex: false,
-  reconnectTries: Number.MAX_VALUE,
-  reconnectInterval: 500,
   poolSize: 10,
-  bufferMaxEntries: 0
+  bufferMaxEntries: 0,
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+
 };
 const DATABASE = process.env.MONGODB_URI || config.db;
 mongoose.Promise = Promise;

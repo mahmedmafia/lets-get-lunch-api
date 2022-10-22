@@ -1,7 +1,7 @@
 {
   "name": "lets-get-lunch-api",
   "version": "1.0.0",
-  "description": "API for learning Angular2",
+  "description": "API for learning Angular2 Testing",
   "main": "index.js",
   "scripts": {
     "postinstall": "gulp",
@@ -10,12 +10,20 @@
     "api-test": "cross-env NODE_ENV=test nodemon built/index.js",
     "test": "cross-env NODE_ENV=test mocha built/test --opts built/test/mocha.opts"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mahmedmafia/lets-get-lunch-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mahmedmafia/lets-get-lunch-api/issues"
+  },
+  "homepage": "https://github.com/mahmedmafia/lets-get-lunch-api#readme",
   "engines": {
     "node": "7.6.0",
     "npm": "4.1.2"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "bluebird": "^3.4.2",
@@ -26,8 +34,8 @@
     "gulp-typescript": "3.1.6",
     "jsonwebtoken": "^7.1.9",
     "moment": "^2.18.1",
-    "mongodb": "^2.2.8",
-    "mongoose": "^4.5.9",
+    "mongodb": "4",
+    "mongoose": "^5.13.15",
     "mongoose-unique-validator": "2.0.1",
     "nodemon": "^1.10.2",
     "request": "^2.81.0",
@@ -47,6 +55,7 @@
     "@types/moment": "^2.13.0",
     "@types/mongodb": "^2.1.41",
     "@types/mongoose": "^4.7.9",
+    "@types/node": "^18.11.3",
     "@types/request": "0.0.42",
     "@types/request-promise": "^4.1.33",
     "@types/sinon": "^2.1.2",
